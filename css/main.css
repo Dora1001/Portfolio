@@ -1,19 +1,88 @@
-header {
-  background: #00f7ff;
-  height: 80px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-header h1 {
-  color: black;
-  font-size: 65px;
+
+body {
+  font-family: "Lato", sans-serif;
+  font-size: 15px;
 }
-@-webkit-keyframes test {
-  0% {
-    width: 100%;
-  }
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-@keyframes test {
-  0% {
-    width: 100%;
-  }
+
+.container:hover .box {
+  border-radius: 13px;
+  box-shadow: 0 3px 4px 0 rgba(44, 71, 146, 0.25);
+  transition-delay: 0.32s;
+}
+.container:hover .box .box::after {
+  opacity: 1;
+}
+.container:hover .icon_bg {
+  border-radius: 13px;
+  transform: translateY(-22px) scale(3);
+}
+.container:hover .icon {
+  transform: translateY(-48px) scale(1.4);
+}
+.container:hover .text {
+  opacity: 0;
+  transform: translateY(-14px) scale(0.8);
+}
+
+.container-box {
+  height: 476px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  position: absolute;
+  width: 373px;
+  height: 476px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 13px;
+  overflow: hidden;
+  transition: box-shadow ease 1s;
+}
+
+.icon_bg {
+  width: 180px;
+  height: 180px;
+  border-radius: 100%;
+  background-color: #5959e3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.6s ease-in-out;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-top: 8px;
+  transition: all 0.6s ease;
+  transition-delay: 0.32s;
+  will-change: transform;
+}
+
+.text {
+  position: relative;
+  top: -32px;
+  width: 200px;
+  text-align: center;
+  transition: all 0.4s ease;
+  transition-delay: 0.32s;
 }
 /*# sourceMappingURL=main.css.map */
