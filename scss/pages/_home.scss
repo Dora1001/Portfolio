@@ -1,50 +1,45 @@
-
-
+header {
+    @include flex-center;
+    margin-top: 5.5em;
+}
 
 .container {
     @include flex-center;
     flex-direction: column;
+    @include box-size;
 
+    &:hover {
+     
 
-&:hover {
-    .box {
-        box-shadow: 0 3px 4px 0 rgba(44, 71, 146, 0.25);
-        transition-delay: 0.32s;
-        -webkit-transition-delay: 0.32s;
-        // safari corner fixed
-        -webkit-mask-image: -webkit-radial-gradient(white, black);
+        .icon-bg {
+            border-radius: 13px;
+            transform: translateY(-22px) scale(3);
+            -webkit-transform: translateY(-22px) scale(3);
+            -webkit-mask-image: -webkit-radial-gradient(white, black);
+        }
+
+        .icon {
+            transform: translateY(-48px) scale(1.4);
+            -webkit-ransform: translateY(-48px) scale(1.4);
+        }
+
+        .text {
+            opacity: 0;
+            transform: translateY(-14px) scale(0.8);
+            -webkit-transform: translateY(-14px) scale(0.8);
+        }
     }
-
-    .icon_bg {
-        border-radius: 13px;
-        transform: translateY(-22px) scale(3);
-        -webkit-transform: translateY(-22px) scale(3);
-    }
-
-    .icon {
-        transform: translateY(-48px) scale(1.4);
-        -webkit-ransform: translateY(-48px) scale(1.4);
-    }
-
-    .text {
-        opacity: 0;
-        transform: translateY(-14px) scale(0.8);
-        -webkit-transform: translateY(-14px) scale(0.8);
-    }
-}
 }
 
 .container-box {
     @include flex-center;
-    border-radius: 23px;
-    height: 476px;
+    @include box-size;
 }
 
-.box {
+.box-frontend {
     @include flex-center;
     position: absolute;
-    width: 373px;
-    height: 476px;
+    @include box-size;
     flex-direction: column;
     border-radius: 13px;
     overflow: hidden;
@@ -52,34 +47,45 @@
     -webkit-transition: box-shadow ease 0.4s;
     -webkit-mask-image: -webkit-radial-gradient(white, black);
 
-    &:after{
-
-        content: "Junior front-end developer, see my portfolio on Github";
-        position: absolute;
-        width: 270px;
-        top: 311px;
-        opacity: 0;
-        font-size: 1.2em;
-        color: white;
-        line-height: 1.5em;
-        -webkit-transition: all 0.6s ease;
-        transition: all 0.6s ease;
-        -webkit-transition-delay: 0.32s;
-        transition-delay: 0.32s;
-        text-align: center;
-
-
+    &:after {
+        content: "Front end developer - Github";
+        @include box-content;
     }
 }
 
-.icon_bg {
+.box-graphic {
+    @include flex-center;
+    position: absolute;
+    @include box-size;
+    flex-direction: column;
+    border-radius: 13px;
+    overflow: hidden;
+    transition: box-shadow ease 0.4s;
+    -webkit-transition: box-shadow ease 0.4s;
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
+
+    &:after {
+        content: "Graphic designer - portfolio";
+        @include box-content;
+    }
+}
+
+.icon-bg {
     @include flex-center;
     width: 180px;
     height: 180px;
     border-radius: 100%;
-    background-color: $colorligh;
+    
     transition: all 0.6s ease-in-out;
     -webkit-transition: all 0.6s ease-in-out;
+}
+
+.icon-bg-frontend {
+    background-color: $colorligh;
+}
+
+.icon-bg-graphic {
+    background-color: $colorlighter;
 }
 
 .icon {
@@ -101,12 +107,27 @@
     transition: all 0.4s ease;
     transition-delay: 0.32s;
 
-    .title {
+    .title-graphic {
+        font-size: 1.3em;
+        color: $colorlighter;
+    }
+
+    .title-frontend {
         font-size: 1.3em;
         color: $colorligh;
     }
 }
 
-.container-box:hover .box::after {
-    opacity: 1;
+.container-box:hover {
+    .box-frontend {
+        &:after {
+            opacity: 1;
+        }
+    }
+
+    .box-graphic {
+        &:after {
+            opacity: 1;
+        }
+    }
 }

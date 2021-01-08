@@ -10,22 +10,28 @@ body {
   min-height: 100vh;
 }
 
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5.5em;
+}
+
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin: 0;
+  padding: 0;
+  width: 373px;
+  height: 476px;
 }
-.container:hover .box {
-  box-shadow: 0 3px 4px 0 rgba(44, 71, 146, 0.25);
-  transition-delay: 0.32s;
-  -webkit-transition-delay: 0.32s;
-  -webkit-mask-image: -webkit-radial-gradient(white, black);
-}
-.container:hover .icon_bg {
+.container:hover .icon-bg {
   border-radius: 13px;
   transform: translateY(-22px) scale(3);
   -webkit-transform: translateY(-22px) scale(3);
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
 }
 .container:hover .icon {
   transform: translateY(-48px) scale(1.4);
@@ -41,15 +47,19 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 23px;
+  margin: 0;
+  padding: 0;
+  width: 373px;
   height: 476px;
 }
 
-.box {
+.box-frontend {
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
+  margin: 0;
+  padding: 0;
   width: 373px;
   height: 476px;
   flex-direction: column;
@@ -59,8 +69,8 @@ body {
   -webkit-transition: box-shadow ease 0.4s;
   -webkit-mask-image: -webkit-radial-gradient(white, black);
 }
-.box:after {
-  content: "Junior front-end developer, see my portfolio on Github";
+.box-frontend:after {
+  content: "Front end developer - Github";
   position: absolute;
   width: 270px;
   top: 311px;
@@ -73,16 +83,53 @@ body {
   text-align: center;
 }
 
-.icon_bg {
+.box-graphic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  width: 373px;
+  height: 476px;
+  flex-direction: column;
+  border-radius: 13px;
+  overflow: hidden;
+  transition: box-shadow ease 0.4s;
+  -webkit-transition: box-shadow ease 0.4s;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+}
+.box-graphic:after {
+  content: "Graphic designer - portfolio";
+  position: absolute;
+  width: 270px;
+  top: 311px;
+  opacity: 0;
+  font-size: 1.2em;
+  color: white;
+  line-height: 1.5em;
+  transition: all 0.6s ease;
+  transition-delay: 0.32s;
+  text-align: center;
+}
+
+.icon-bg {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 180px;
   height: 180px;
   border-radius: 100%;
-  background-color: #5959e3;
   transition: all 0.6s ease-in-out;
   -webkit-transition: all 0.6s ease-in-out;
+}
+
+.icon-bg-frontend {
+  background-color: #5959e3;
+}
+
+.icon-bg-graphic {
+  background-color: #3b3be4;
 }
 
 .icon {
@@ -106,12 +153,19 @@ body {
   transition: all 0.4s ease;
   transition-delay: 0.32s;
 }
-.text .title {
+.text .title-graphic {
+  font-size: 1.3em;
+  color: #3b3be4;
+}
+.text .title-frontend {
   font-size: 1.3em;
   color: #5959e3;
 }
 
-.container-box:hover .box::after {
+.container-box:hover .box-frontend:after {
+  opacity: 1;
+}
+.container-box:hover .box-graphic:after {
   opacity: 1;
 }
 /*# sourceMappingURL=main.css.map */

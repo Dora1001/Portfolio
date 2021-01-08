@@ -2,5 +2,26 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
+}
+
+@mixin box-size {
+    margin: 0;
+    padding: 0;
+    width: 373px;
+    height: 476px;
+}
+
+@mixin box-content (){
+    position: absolute;
+    width: 270px;
+    top: 311px;
+    opacity: 0;
+    font-size: 1.2em;
+    color: white;
+    line-height: 1.5em;
+    -webkit-transition: all 0.6s ease;
+    transition: all 0.6s ease;
+    -webkit-transition-delay: 0.32s;
+    transition-delay: 0.32s;
+    text-align: center;
+}
