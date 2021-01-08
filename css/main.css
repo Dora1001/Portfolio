@@ -14,6 +14,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   margin-top: 5.5em;
 }
 
@@ -27,17 +28,17 @@ header {
   width: 373px;
   height: 476px;
 }
-.container:hover .icon-bg {
+.container:hover .icon-bg, .container:active .icon-bg {
   border-radius: 13px;
   transform: translateY(-22px) scale(3);
   -webkit-transform: translateY(-22px) scale(3);
   -webkit-mask-image: -webkit-radial-gradient(white, black);
 }
-.container:hover .icon {
+.container:hover .icon, .container:active .icon {
   transform: translateY(-48px) scale(1.4);
   -webkit-ransform: translateY(-48px) scale(1.4);
 }
-.container:hover .text {
+.container:hover .text, .container:active .text {
   opacity: 0;
   transform: translateY(-14px) scale(0.8);
   -webkit-transform: translateY(-14px) scale(0.8);

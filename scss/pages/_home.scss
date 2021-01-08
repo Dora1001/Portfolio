@@ -1,5 +1,6 @@
 header {
     @include flex-center;
+    flex-wrap: wrap;
     margin-top: 5.5em;
 }
 
@@ -8,7 +9,8 @@ header {
     flex-direction: column;
     @include box-size;
 
-    &:hover {
+    &:hover ,
+    &:active  {
      
 
         .icon-bg {
