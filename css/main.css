@@ -71,7 +71,7 @@ header {
   -webkit-mask-image: -webkit-radial-gradient(white, black);
 }
 .box-frontend:after {
-  content: "Front end developer - Github";
+  content: "See my works on Github";
   position: absolute;
   width: 270px;
   top: 311px;
@@ -82,6 +82,7 @@ header {
   transition: all 0.6s ease;
   transition-delay: 0.32s;
   text-align: center;
+  margin-top: 45px;
 }
 
 .box-graphic {
@@ -101,7 +102,38 @@ header {
   -webkit-mask-image: -webkit-radial-gradient(white, black);
 }
 .box-graphic:after {
-  content: "Graphic designer - portfolio";
+  content: "See my Graphic works";
+  position: absolute;
+  width: 270px;
+  top: 311px;
+  opacity: 0;
+  font-size: 1.2em;
+  color: white;
+  line-height: 1.5em;
+  transition: all 0.6s ease;
+  transition-delay: 0.32s;
+  text-align: center;
+  margin-top: 45px;
+}
+
+.box-contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  width: 373px;
+  height: 476px;
+  flex-direction: column;
+  border-radius: 13px;
+  overflow: hidden;
+  transition: box-shadow ease 0.4s;
+  -webkit-transition: box-shadow ease 0.4s;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+}
+.box-contact:after {
+  content: "Find out how to contact with me";
   position: absolute;
   width: 270px;
   top: 311px;
@@ -133,6 +165,10 @@ header {
   background-color: #3b3be4;
 }
 
+.icon-bg-contact {
+  background-color: #2d2dcc;
+}
+
 .icon {
   display: flex;
   justify-content: center;
@@ -148,6 +184,7 @@ header {
 
 .text {
   position: relative;
+  font-size: 1.3em;
   top: -100px;
   width: 200px;
   text-align: center;
@@ -155,18 +192,22 @@ header {
   transition-delay: 0.32s;
 }
 .text .title-graphic {
-  font-size: 1.3em;
   color: #3b3be4;
 }
 .text .title-frontend {
-  font-size: 1.3em;
   color: #5959e3;
+}
+.text .title-contact {
+  color: #2d2dcc;
 }
 
 .container-box:hover .box-frontend:after {
   opacity: 1;
 }
 .container-box:hover .box-graphic:after {
+  opacity: 1;
+}
+.container-box:hover .box-contact:after {
   opacity: 1;
 }
 /*# sourceMappingURL=main.css.map */

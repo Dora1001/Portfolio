@@ -50,8 +50,9 @@ header {
     -webkit-mask-image: -webkit-radial-gradient(white, black);
 
     &:after {
-        content: "Front end developer - Github";
+        content: "See my works on Github";
         @include box-content;
+        margin-top: 45px;
     }
 }
 
@@ -67,7 +68,25 @@ header {
     -webkit-mask-image: -webkit-radial-gradient(white, black);
 
     &:after {
-        content: "Graphic designer - portfolio";
+        content: "See my Graphic works";
+        @include box-content;
+        margin-top: 45px;
+    }
+}
+
+.box-contact {
+    @include flex-center;
+    position: absolute;
+    @include box-size;
+    flex-direction: column;
+    border-radius: 13px;
+    overflow: hidden;
+    transition: box-shadow ease 0.4s;
+    -webkit-transition: box-shadow ease 0.4s;
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
+
+    &:after {
+        content: "Find out how to contact with me";
         @include box-content;
     }
 }
@@ -90,6 +109,10 @@ header {
     background-color: $colorlighter;
 }
 
+.icon-bg-contact {
+    background-color: $colordark;
+}
+
 .icon {
     @include flex-center;
     position: relative;
@@ -103,22 +126,31 @@ header {
 
 .text {
     position: relative;
+    font-size: 1.3em;
     top: -100px;
     width: 200px;
     text-align: center;
     transition: all 0.4s ease;
     transition-delay: 0.32s;
 
+  
+
     .title-graphic {
-        font-size: 1.3em;
+       
         color: $colorlighter;
     }
 
     .title-frontend {
-        font-size: 1.3em;
+        
         color: $colorligh;
     }
+
+    .title-contact {
+        
+        color: $colordark;
+    }
 }
+
 
 .container-box:hover {
     .box-frontend {
@@ -132,4 +164,13 @@ header {
             opacity: 1;
         }
     }
+
+    .box-contact {
+        &:after {
+            opacity: 1;
+        }
+    }
 }
+
+
+
