@@ -1,7 +1,7 @@
 header {
     @include flex-center;
     flex-wrap: wrap;
-    margin-top: 5.5em;
+    margin-top: 2em;
 }
 
 .container {
@@ -9,10 +9,8 @@ header {
     flex-direction: column;
     @include box-size;
 
-    &:hover ,
-    &:active  {
-     
-
+    &:hover,
+    &:active {
         .icon-bg {
             border-radius: 13px;
             transform: translateY(-22px) scale(3);
@@ -96,7 +94,7 @@ header {
     width: 180px;
     height: 180px;
     border-radius: 100%;
-    
+
     transition: all 0.6s ease-in-out;
     -webkit-transition: all 0.6s ease-in-out;
 }
@@ -133,24 +131,18 @@ header {
     transition: all 0.4s ease;
     transition-delay: 0.32s;
 
-  
-
     .title-graphic {
-       
         color: $colorlighter;
     }
 
     .title-frontend {
-        
         color: $colorligh;
     }
 
     .title-contact {
-        
         color: $colordark;
     }
 }
-
 
 .container-box:hover {
     .box-frontend {
@@ -172,5 +164,22 @@ header {
     }
 }
 
+section {
+    display: flex;
+    justify-content: center;
+    
 
+.image_me {
+    width: 100px;
+    height: auto;
+    border-radius: 15%;
+    margin-right: 1em;
+}
 
+.about {
+    display: flex;
+    align-items: center;
+    width: 900px;
+}
+
+}
