@@ -13,8 +13,14 @@ body {
 
 h1 {
   font-family: "Lato", sans-serif;
-  font-size: 25px;
+  font-size: 30px;
   font-weight: 300;
+  line-height: 1.5em;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
 }
 
 header {
@@ -218,19 +224,45 @@ header {
   opacity: 1;
 }
 
-section {
+.section_about {
   display: flex;
   justify-content: center;
+  margin-top: 1em;
 }
-section .image_me {
-  width: 100px;
+.section_about .image_me {
+  width: 80px;
   height: auto;
   border-radius: 15%;
   margin-right: 1em;
 }
-section .about {
+.section_about .about {
   display: flex;
   align-items: center;
   width: 900px;
+}
+
+.section_portfolio {
+  display: flex;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding-top: 0.6em;
+  width: 100%;
+  background-color: #dadada;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+footer .ico_linked {
+  width: 2em;
+}
+footer .ico_github {
+  width: 2em;
+}
+footer .span_contact {
+  margin-right: 1em;
 }
 /*# sourceMappingURL=main.css.map */
